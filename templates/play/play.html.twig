@@ -1,1 +1,13 @@
 <h1>Here we are!</h1>
+
+{# Here we load the ship! #}
+{% if showShip is true %}
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ ship.name }}</td>
+        </tr>
+    </table>
+</div>
+{% endif %}

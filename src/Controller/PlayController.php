@@ -23,6 +23,13 @@ final class PlayController extends AbstractController
     #[Route('/html', name: 'playHtml', methods: ['GET'])]
     public function playHtml(): Response
     {
-        return $this->render('play/play.html.twig');
+        $showShip = true;
+        $ship = [
+            'name' => 'Ship Name!',
+            'class' => 'Ship Class!',
+            'description' => 'Ship Description!',
+        ];
+
+        return $this->render('play/play.html.twig', compact('showShip', 'ship'));
     }
 }
