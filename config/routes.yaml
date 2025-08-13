@@ -17,3 +17,8 @@ controllers:
     prefix: /{_locale}
     defaults:
         _locale: '%app.locale%'
+        mynewparam: true
+
+playing:
+    path: /playing
+    controller: App\Controller\DefaultController::play
