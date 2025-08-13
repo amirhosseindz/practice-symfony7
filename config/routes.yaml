@@ -17,8 +17,14 @@ controllers:
     prefix: /{_locale}
     defaults:
         _locale: '%app.locale%'
-        mynewparam: true
+        my_new_default_param: true
 
-playing:
-    path: /playing
-    controller: App\Controller\DefaultController::play
+playingJson:
+    path: /playing/json
+    controller: App\Controller\PlayController::playJson
+    defaults:
+        param1: 0
+
+playingRender:
+    path: /playing/render
+    controller: App\Controller\PlayController::playHtml
